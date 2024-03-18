@@ -9,7 +9,7 @@ public class TrainControllerImpl implements TrainController{
 	private int speedLimit = 0;
 
 	@Override
-	public void followSpeed() {
+	public void followSpeed() { //here i implemented the requreid function using Threads
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
@@ -19,7 +19,6 @@ public class TrainControllerImpl implements TrainController{
 		        referenceSpeed = 0;
             }
 		}
-
 		enforceSpeedLimit();
 	}
 
