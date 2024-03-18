@@ -2,14 +2,14 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
-public class TrainControllerImpl implements TrainController {
+public class TrainControllerImpl implements TrainController{
 
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
 
 	@Override
-	public void followSpeed() {
+	public void followSpeed() { //here i implemented the requreid function using Threads
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
@@ -19,7 +19,6 @@ public class TrainControllerImpl implements TrainController {
 		        referenceSpeed = 0;
             }
 		}
-
 		enforceSpeedLimit();
 	}
 
