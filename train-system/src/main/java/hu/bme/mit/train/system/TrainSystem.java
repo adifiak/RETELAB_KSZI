@@ -18,14 +18,18 @@ public class TrainSystem {
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
 	TrainSystem(){
+		//Createing timed tesk
 		TimerTask task = new TimerTask() {
 			public void run() {
 				controller.followSpeed();
 			}
 		};
+		//Createing timer
 		Timer timer = new Timer("Timer");
     
+		//Seting delay to 10ms
 		long delay = 10L;
+		//Starting timed task
 		timer.schedule(task, delay);
 	}
 
