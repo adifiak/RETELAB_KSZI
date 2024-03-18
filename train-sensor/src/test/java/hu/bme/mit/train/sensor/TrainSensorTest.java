@@ -48,7 +48,7 @@ public class TrainSensorTest {
         verify(mockedUser, times(0)).setAlarmState(true);
 		//Assert.assertEquals(false, user.getAlarmState());
 	}
-//asd
+//asdasd
     @Test
 	public void testnegativevalue() {
 		sensor.overrideSpeedLimit(-10);
